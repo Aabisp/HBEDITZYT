@@ -1,0 +1,6 @@
+var typed = new Typed(".typing", {
+    strings: ["I am Aayush Karki, a 15-year-old boy from Nepal with a deep passion for technology and coding. I have been fascinated by the endless possibilities of technology since I was a child, and my curiosity led me to discover the world of programming.Currently, I am learning various programming languages, including JavaScript, app development, game development, and Python. I spend countless hours studying and practicing my skills, constantly seeking new challenges to improve my abilities.Despite my young age, I remain dedicated to my craft and am constantly looking to learn and grow. I am confident in my abilities and am determined to make a positive impact on the world through my passion for technology.Looking to the future, I am excited about the endless possibilities that lie ahead. I am determined to keep pushing my limits and make a difference in the world through my skills and knowledge."],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+ });

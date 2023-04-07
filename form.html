@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="validator.min.js"></script>
+<script type="text/javascript">
+  validator.isEmail('foo@bar.com'); //=> true
+</script>
+    <style>
+    /* Contact form styles */
+    form {
+    max-width: 500px;
+    margin: 0 auto;
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 10px;
+    }
+    
+    input[type="text"], input[type="email"], textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      
+    }
+    button[type="submit"] {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+    background-color: #ff4040;
+    }
+    </style>
+    <title>MEMBERSHIP PACKAGE</title>
+</head>
+<body>
+    <form id="hb">
+        <label> Name : </label>
+        <input type='name' id='name' name="name" required>
+        <br><br>
+        <label> Email : </label>
+        <input type="email" id="mail" name="mail" required>
+        <br><br>
+        <label> Number : </label>
+        <input type="number" id="num" name="num" required>
+        <br><br>
+        <label> DOB : </label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+        <label> MEMBERSHIP OPTION</label>
+        <select id="mem" name="mem" required>
+          <option value=''> Select Membership</option>
+          <option> Bronze - 120 </option>
+          <option> Silver - 220</option>
+          <option> Diamond - 440</option>
+        </select>
+        <br><br>
+        <label> Payment Method : </label>
+        <select id="payment" name="payment" required>
+          <option value=''> Select Payment Method</option>
+          <option value="khalti.html"> Khalti</option>
+          <option value="esewa.html"> eSewa </option>
+        </select>
+        <br><br>
+        <div id = "gender" name="gender">
+          <label> Select Gender</label>
+          <input type="radio" value="option1" name="options" id="male">Male
+          <input type="radio" value="option2" name="options" id="female">Female
+          <input type="radio" value="option3" name="options" id="gay">Gay
+          <input type="radio" value="option4" name="options" id="truth">Rather Not Say
+
+        </div>
+        <br><br>
+        <label> Payment Proof</label>
+        <input type="file" id="file" name="file" accept="image/*" required>
+        
+        <button id="btn" type="submit" onclick="selecthb()">Submit</button>
+        <style>
+          body{
+            background-color: blue;
+          }
+          input{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: inherit;
+          }
+          .name{
+            width: 47px;
+          }
+        </style>
+<script>
+  function selecthb() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById('mail').value;
+    var number = document.getElementById('num').value;
+    var dob = document.getElementById('dob').value;
+    var membership = document.getElementById('mem').value;
+    var payment = document.getElementById('payment').value;
+    var gender = document.getElementById('gender').value;
+    var proof = document.getElementById('file').value;
+    
+    if (name, dob, email, number, membership, payment, gender, proof === '') {
+      alert("Please Fill Up The Form")
+    }
+    if (membership, payment, gender) {
+    alert("Please select the options");
+  } else {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(hb.mail.value)) {
+    window.location.href = payment;
+
+  } else {
+    alert("You have entered an invalid email address!")
+}
+    }
+  }
+</script>
+</body>
+</html>
